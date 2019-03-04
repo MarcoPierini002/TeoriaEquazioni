@@ -33,7 +33,15 @@ namespace TeoriaEquazioni
             if (a == 0 && b != 0)
             {
                 resp = true;
-
+            }
+            return resp;
+        }
+        public static bool IsDegree2(double a, double b)
+        {
+            bool resp = true;
+            if (a == 0)
+            {
+                resp = false;
             }
             return resp;
         }

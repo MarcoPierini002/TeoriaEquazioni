@@ -112,5 +112,33 @@ namespace TeoriaEquazioni.Test
             bool response = TeoriaEquazioni.IsImpossible(a, b);
             Assert.AreEqual(response_attesa, response);
         }
+
+        [TestMethod]
+        public void TestIsDegree2_1()
+        {
+            double a = 3;
+            bool response_attesa = true;
+            bool response = TeoriaEquazioni.IsDetermined(a);
+            Assert.AreEqual(response_attesa, response);
+        }
+
+        [TestMethod]
+        public void TestIsDegree2_2()
+        {
+            double a = -3;
+            bool response_attesa = true;
+            bool response = TeoriaEquazioni.IsDetermined(a);
+            Assert.AreEqual(response_attesa, response);
+        }
+
+        [TestMethod]
+        public void TestIsDegree2_3()
+        {
+            double a = 0;
+            bool response_attesa = false;
+            bool response = TeoriaEquazioni.IsDetermined(a);
+            Assert.AreEqual(response_attesa, response);
+        }
+
     }
 }
