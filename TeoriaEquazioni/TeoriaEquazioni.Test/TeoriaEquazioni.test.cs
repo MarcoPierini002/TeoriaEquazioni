@@ -34,5 +34,44 @@ namespace TeoriaEquazioni.Test
             Assert.AreEqual(response_attesa, response);
         }
 
+        [TestMethod]
+        public void TestIsNotDetermined1()
+        {
+            double a = 4;
+            double b = 5;
+            bool response_attesa = false;
+            bool response = TeoriaEquazioni.IsnotDetermined(a, b);
+            Assert.AreEqual(response_attesa, response);
+        }
+
+        [TestMethod]
+        public void TestIsNotDetermined2()
+        {
+            double a = 0;
+            double b = 5;
+            bool response_attesa = true;
+            bool response = TeoriaEquazioni.IsnotDetermined(a, b);
+            Assert.AreEqual(response_attesa, response);
+        }
+
+        [TestMethod]
+        public void TestIsNotDetermined3()
+        {
+            double a = 4;
+            double b = 0;
+            bool response_attesa = false;
+            bool response = TeoriaEquazioni.IsnotDetermined(a, b);
+            Assert.AreEqual(response_attesa, response);
+        }
+
+        [TestMethod]
+        public void TestIsNotDetermined4()
+        {
+            double a = 0;
+            double b = 0;
+            bool response_attesa = false;
+            bool response = TeoriaEquazioni.IsnotDetermined(a, b);
+            Assert.AreEqual(response_attesa, response);
+        }
     }
 }
