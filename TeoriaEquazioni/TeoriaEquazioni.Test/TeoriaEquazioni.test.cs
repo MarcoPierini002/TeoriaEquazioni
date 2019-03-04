@@ -140,5 +140,41 @@ namespace TeoriaEquazioni.Test
             Assert.AreEqual(response_attesa, response);
         }
 
+        [TestMethod]
+        public void TestDelta1()
+        {
+            double a = 0;
+            double b = 7;
+            double c = 5;
+            double expected = 49;
+            double obtained = TeoriaEquazioni.Delta(a, b, c);
+
+            Assert.AreEqual(expected, obtained);
+        }
+
+        [TestMethod]
+        public void TestDelta2()
+        {
+            double a = 4;
+            double b = 4;
+            double c = 1;
+            double expected = 0;
+            double obtained = TeoriaEquazioni.Delta(a, b, c);
+
+            Assert.AreEqual(expected, obtained);
+        }
+
+        [TestMethod]
+        public void TestDelta3()
+        {
+            double a = 3;
+            double b = 6;
+            double c = 2;
+            double expected = 12;
+            double obtained = TeoriaEquazioni.Delta(a, b, c);
+
+            Assert.AreEqual(expected, obtained);
+        }
+
     }
 }

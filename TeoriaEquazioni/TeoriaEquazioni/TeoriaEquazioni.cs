@@ -45,5 +45,12 @@ namespace TeoriaEquazioni
             }
             return resp;
         }
+
+        public static double Delta(double a, double b, double c)
+        {
+            double resp = 0;
+            resp = (b * b) - (4 * (a * c));
+            return resp;
+        }
     }
 }
