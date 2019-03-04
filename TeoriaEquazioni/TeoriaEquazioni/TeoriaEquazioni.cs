@@ -52,5 +52,20 @@ namespace TeoriaEquazioni
             resp = (b * b) - (4 * (a * c));
             return resp;
         }
+
+        public static string Equation(double a, double b)
+        {
+            string resp = "";
+
+            if (a == 0 && b != 0)
+                resp ="Indeterminato";
+
+            else if (a == 0 && b != 0)
+                resp = "Impossibile";
+            else
+                resp= Convert.ToString(-b / a);
+
+            return resp;
+        }
     }
 }
